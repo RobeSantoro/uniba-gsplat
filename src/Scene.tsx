@@ -13,7 +13,7 @@ declare module '@react-three/fiber' {
 
 function Scene() {
 	return <lumaSplats
-		semanticsMask={LumaSplatsSemantics.FOREGROUND}
+		// semanticsMask={LumaSplatsSemantics.FOREGROUND}
 		source='https://lumalabs.ai/capture/09e9f5a0-b9d3-492b-b35d-48bc026449e9'
 		position={[-1, 0, 0]}
         rotation={[-0.5, 0, 0]}
