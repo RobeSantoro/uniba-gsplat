@@ -3,6 +3,7 @@ import { Canvas } from '@react-three/fiber'
 import './App.css'
 import { OrbitControls } from '@react-three/drei'
 import Scene from './Scene'
+import DemoLighting from './DemoLighting'
 
 function App() {
 
@@ -16,18 +17,24 @@ function App() {
       }}
     >
 
-      <Canvas>
-        <ambientLight />
-        <pointLight position={[10, 10, 10]} />
+      <Canvas
+        gl={{ alpha: true, antialias: false, preserveDrawingBuffer: true }}
+        camera={{ position: [0, 0, 5], fov: 60, near: 0.1, far: 1000,}}
+      >
+        {/* <ambientLight /> */}
+        <pointLight position={[5, 5, 5]} intensity={100} />
 
         {/* <mesh>
           <boxGeometry args={[1, 1, 1]} />
-          <meshStandardMaterial color="hotpink" />
+          <meshStandardMaterial color={'hotpink'} />
         </mesh> */}
-        <Scene />
+
+        {/* <Scene /> */}
+
+        <DemoLighting />
 
         <OrbitControls />
-
+        <gridHelper args={[30, 30]} />
       </Canvas>
     </div>
   )
