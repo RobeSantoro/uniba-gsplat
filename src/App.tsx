@@ -2,8 +2,9 @@ import { Canvas } from '@react-three/fiber'
 
 import './App.css'
 import { OrbitControls } from '@react-three/drei'
-// import Scene from './Scene'
-import DemoLighting from './DemoLighting'
+import Scene from './Scene'
+// import DemoLighting from './DemoLighting'
+// import Uniba from './Uniba'
 
 function App() {
 
@@ -19,7 +20,7 @@ function App() {
 
       <Canvas
         gl={{ alpha: true, antialias: false, preserveDrawingBuffer: true }}
-        camera={{ position: [0, 0, 5], fov: 60, near: 0.1, far: 1000,}}
+        camera={{ position: [3, 2, 2], fov: 80, near: 0.1, far: 1000, }}
       >
         {/* <ambientLight /> */}
         <pointLight position={[5, 5, 5]} intensity={100} />
@@ -29,13 +30,14 @@ function App() {
           <meshStandardMaterial color={'hotpink'} />
         </mesh> */}
 
-        {/* <Scene /> */}
-
-        <DemoLighting />
+        <Scene />
+        {/* <DemoLighting /> */}
+        {/* <Uniba /> */}
 
         <OrbitControls />
         <gridHelper args={[30, 30]} />
       </Canvas>
+
     </div>
   )
 }
