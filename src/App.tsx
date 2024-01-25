@@ -2,7 +2,7 @@ import { Canvas } from '@react-three/fiber'
 
 import './App.css'
 import { OrbitControls } from '@react-three/drei'
-import Scene from './Scene'
+// import Scene from './Scene'
 import DemoLighting from './DemoLighting'
 
 function App() {
