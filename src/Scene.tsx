@@ -52,6 +52,7 @@ function Scene() {
                     ref={splats}
                     source='https://lumalabs.ai/capture/09e9f5a0-b9d3-492b-b35d-48bc026449e9'
                     loadingAnimationEnabled={false}
+                    particleRevealEnabled={true}
                     position={[-2, 5.7, -0.5]}
                     rotation={[-0.05, 0.21, 0.1]}
                     scale={3}
